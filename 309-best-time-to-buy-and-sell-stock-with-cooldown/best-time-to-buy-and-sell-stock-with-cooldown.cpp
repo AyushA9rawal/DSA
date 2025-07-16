@@ -9,17 +9,18 @@ public:
             return t[i][buying];
         }
         int cooldown=solve(i+1,buying,prices);
-
+        int buy;
+        int sell;
         if(buying)
         {
-            int buy=solve(i+1,false,prices)-prices[i];
-            return t[i][buying]=max(buy,cooldown);
+             buy=solve(i+1,false,prices)-prices[i];
+            
         }
         else
         {
-            int sell=solve(i+2,true,prices)+prices[i];
-            return t[i][buying] =max(sell,cooldown);
+             sell=solve(i+2,true,prices)+prices[i];
         }
+        return t[i][buying]=max(buy,cooldown);
     }
     int maxProfit(vector<int>& prices) {
         memset(t,-1,sizeof(t));
