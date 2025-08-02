@@ -13,6 +13,7 @@ public:
         while(r-1>0 && arr[r-1]>arr[r])
         {
             r--;
+            
         }
 
         return l==r;
