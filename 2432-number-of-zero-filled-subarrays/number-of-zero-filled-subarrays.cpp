@@ -21,7 +21,3 @@ public:
 };
 
 
-//[1,3,0,0,2,0,0,4] => what is the error. first dry run.
-
-//count =0; streak=0;
-//
